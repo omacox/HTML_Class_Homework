@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oma's Web Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        header, nav, section, form, aside, footer, div {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .highlight {
+            color: red;
+        }
+        .hover-grow {
+            transition: font-size 0.3s;
+        }
+        .hover-grow:hover {
+            font-size: 1.5em;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+        form {
+            background-color: #007BFF;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+            margin: 20px;
+        }
+        form label {
+            color: white;
+        }
+        form input {
+            color: black;
+            background-color: white;
+            padding: 5px;
+        }
+        form input:focus {
+            outline: none;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            justify-content: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+        }
+        #extraContent {
+            display: none;
+        }
+        button {
+            color: black;
+            background-color: white;
+            border: 2px solid #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+    <script>
+        function changeBorderColor(element, color) {
+            element.style.borderColor = color;
+        }
+        
+        function toggleVisibility() {
+            var x = document.getElementById("extraContent");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function showWelcomeMessage() {
+            alert('Welcome to Oma\'s Website!');
+        }
+
+        function showMap() {
+            var mapContainer = document.getElementById("mapContainer");
+            if (mapContainer.style.display === "none") {
+                mapContainer.style.display = "block";
+            } else {
+                mapContainer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Oma's Website</h1>
+            <p class="highlight hover-grow">Welcome to my website!</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="https://omacox.com" target="_blank">Home</a></li>
+                <li><a href="https://omacox.com/x/" target="_blank">About</a></li>
+                <li><a href="javascript:void(0);" onclick="showMap()">Contact</a></li>
+                <li><a href="Vodafone.pdf" download="Vodafone.pdf" target="_blank">Download PDF</a></li>
+            </ul>
+        </nav>
+        <div class="content-wrapper">
+            <!-- Video Element -->
+            <div>
+                <h2>Sample Video</h2>
+                <video controls width="300">
+                    <source src="test.mkv" type="video/mp4">
+                    <source src="path_to_your_movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <form action="https://github.com" method="post" onsubmit="showWelcomeMessage()">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" onfocus="changeBorderColor(this, 'red')" onblur="changeBorderColor(this, '#ccc')">
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" onfocus="changeBorderColor(this, 'red')" onblur="changeBorderColor(this, '#ccc')">
+                
+                <label for="homepage">Homepage:</label>
+                <input type="url" id="homepage" name="homepage" placeholder="https://example.com" onfocus="changeBorderColor(this, 'red')" onblur="changeBorderColor(this, '#ccc')">
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required placeholder="YYYY-MM-DD" min="1900-01-01" max="2010-12-31" onfocus="changeBorderColor(this, 'red')" onblur="changeBorderColor(this, '#ccc')">
+                
+                <label for="additional">Additional Info:</label>
+                <input type="text" id="additional" name="additional" placeholder="Additional info" onfocus="changeBorderColor(this, 'red')" onblur="changeBorderColor(this, '#ccc')">
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Audio Element -->
+            <div>
+                <h2>Sample Audio</h2>
+                <audio controls>
+                    <source src="test.mp3" type="audio/mpeg">
+                    <source src="test.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        
+        <aside>
+            <h2>News</h2>
+            <p>Latest news related to my interests.</p>
+        </aside>
+
+        <button onclick="toggleVisibility()">Toggle Extra Content</button>
+        <div id="extraContent">
+            <h2>Additional Content</h2>
+            <p>This is some extra content that can be toggled on and off.</p>
+        </div>
+
+        <div id="mapContainer" style="display:none;">
+            <h2>Event Location</h2>
+            <div>
+                <iframe
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/@33.1594599,-92.4453363,658m/data=!3m1!1e3?entry=ttu">
+                </iframe>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright © 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
+

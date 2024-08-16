@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oma's Web Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Sets the font color to white */
+            font-family: Arial, sans-serif; /* Sets the font for the entire page */
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Removes default margin */
+            text-align: center; /* Centers text */
+        }
+        header, nav, section, form, aside, footer, div {
+            font-family: Arial, sans-serif; /* Ensures all text elements use the same font */
+            color: white; /* Sets the font color to white */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+        form {
+            background-color: #007BFF; /* A shade of blue */
+            padding: 20px; /* Adds spacing inside the form */
+            border-radius: 8px; /* Optional: rounds the corners of the form */
+            display: flex;
+            flex-direction: column; /* Stack form items vertically */
+            gap: 10px; /* Adds space between form items */
+            width: 300px; /* Sets a fixed width for the form */
+            margin: 20px; /* Adds margin for spacing */
+        }
+        form label {
+            color: white; /* Sets the label color to white */
+        }
+        form input {
+            color: black; /* Ensures input text is black */
+            background-color: white; /* Ensures input background is white */
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+            justify-content: center; /* Centers navigation items */
+        }
+        nav ul li {
+            margin-right: 20px; /* Adds space between navigation items */
+        }
+        nav ul li:last-child {
+            margin-right: 0; /* Removes right margin for the last item */
+        }
+        nav ul li a {
+            text-decoration: none; /* Removes underline from links */
+            color: white; /* White text color */
+            background-color: #007BFF; /* Blue background color */
+            padding: 10px 20px; /* Padding inside buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth background color transition */
+        }
+        nav ul li a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        #extraContent {
+            display: none; /* Hidden by default */
+        }
+        button {
+            color: black; /* Sets button text color to black */
+            background-color: white; /* Sets button background color to white */
+            border: 2px solid #007BFF; /* Adds a border to the button */
+            padding: 10px 20px; /* Adds padding inside the button */
+            border-radius: 5px; /* Rounds the corners of the button */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+            transition: background-color 0.3s, color 0.3s; /* Smooth background and text color transition */
+        }
+        button:hover {
+            background-color: #007BFF; /* Blue background on hover */
+            color: white; /* White text color on hover */
+        }
+    </style>
+    <script>
+        function toggleVisibility() {
+            var x = document.getElementById("extraContent");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Oma's Website</h1>
+            <p>Welcome to my website!</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Vodafone.pdf" download="Vodafone.pdf">Download PDF</a></li>
+            </ul>
+        </nav>
+        <div class="content-wrapper">
+            <!-- Video Element -->
+            <div>
+                <h2>Sample Video</h2>
+                <video controls width="300">
+                    <source src="test.mkv" type="video/mp4">
+                    <source src="path_to_your_movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <form action="/submit" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100">
+                
+                <label for="homepage">Homepage:</label>
+                <input type="url" id="homepage" name="homepage" placeholder="https://example.com">
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required placeholder="YYYY-MM-DD" min="1900-01-01" max="2010-12-31">
+            
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Audio Element -->
+            <div>
+                <h2>Sample Audio</h2>
+                <audio controls>
+                    <source src="test.mp3" type="audio/mpeg">
+                    <source src="test.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        
+        <aside>
+            <h2>News</h2>
+            <p>Latest news related to my interests.</p>
+        </aside>
+
+        <button onclick="toggleVisibility()">Toggle Extra Content</button>
+        <div id="extraContent">
+            <h2>Additional Content</h2>
+            <p>This is some extra content that can be toggled on and off.</p>
+        </div>
+
+        <footer>
+            <p>Copyright © 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+

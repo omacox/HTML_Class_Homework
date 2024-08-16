@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- https://omacox.com/hw9 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS/JS -Homework 9</title>
+<link rel="stylesheet" href="css/css9.css">
+<script src="js/js9.js"></script>
+</head>
+<body>
+    <div>
+    <header>
+        <h1>HTML/CSS/JS - Homework 9</h1>
+    </header>
+ <nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#media">Video</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#location">Location</a></li>
+    </ul>
+</nav>
+    </div>
+    <main>
+<section id="home">
+    <h2>Welcome to My Python Passion</h2>
+    <div class="python-intro">
+        <img src="images/GUgkWZfW0AAQkax.jpeg" alt="Python Logo" class="python-logo">
+        <div class="python-text">
+            <p>Python has become my favorite programming language due to its remarkable versatility and user-friendly syntax. Its readability is unparalleled, making it an ideal choice for beginners and experts alike. Python's extensive standard library and vast ecosystem of third-party packages enable me to tackle a wide range of projects, from web development and data analysis to artificial intelligence and scientific computing. The language's 'batteries included' philosophy means I can quickly prototype ideas and build robust applications with minimal setup.</p>
+            <p>What I find most appealing about Python is its community and philosophy. The Python community is welcoming, supportive, and constantly innovating. The language's guiding principle, 'There should be one-- and preferably only one --obvious way to do it,' resonates with me as it promotes clean, consistent code. Python's emphasis on simplicity and clarity aligns perfectly with my coding style, allowing me to express complex ideas concisely. Whether I'm automating tedious tasks or developing sophisticated algorithms, Python's flexibility and power make it my go-to language for bringing ideas to life.</p>
+        </div>
+    </div>
+</section>
+
+   <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+
+        <label for="homepage">Homepage:</label>
+        <input type="url" id="homepage" name="homepage" placeholder="https://example.com" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required placeholder="YYYY-MM-DD">
+
+        <label for="additional">Additional Info:</label>
+        <textarea id="additional" name="additional" placeholder="Additional info" rows="1"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+   <section id="news">
+    <h2>News</h2>
+    <div id="rss-feed-container"></div>
+</section>
+
+<section id="media">
+    <h2>Media Gallery</h2>
+    <div class="media-grid">
+<div class="media-item">
+    <img src="images/image1.jpg" alt="Audio Player 1" class="audio-player-image">
+    <audio controls src="media/1961BenjaminFreedmanspeechatWillardHotelinWashington.mp3"></audio>
+</div>
+<div class="media-item">
+    <img src="images/image2.jpg" alt="Audio Player 2" class="audio-player-image">
+    <audio controls src="media/3HoursofMeditationMusicRoyaltyFreeMusicRelaxingHealingStressReliefSleep.mp3"></audio>
+</div>
+        <div class="media-item">
+            <video controls src="media/Duetoinifiniterecursionthisfractalsystemis.mp4"></video>
+        </div>
+        <div class="media-item">
+            <video controls src="media/VisualproofofthePythagoreantheoremHJoa.mp4"></video>
+        </div>
+    </div>
+</section>
+<section id="images">
+    <h2>Image Gallery</h2>
+    <div class="carousel">
+        <button class="carousel-button prev">&lt;</button>
+        <img src="" alt="Carousel Image" id="carousel-image">
+        <button class="carousel-button next">&gt;</button>
+    </div>
+</section>
+ <section id="location">
+    <h2>Location</h2>
+    <div class="map-container">
+        <iframe
+            width="600"
+            height="450"
+            style="border:0; max-width: 100%;"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3329.797274776938!2d-92.4453363!3d33.1594599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1628815988000!5m2!1sen!2sus">
+        </iframe>
+    </div>
+    <p class="map-fallback">If the map doesn't load, please <a href="https://www.google.com/maps/@33.1594599,-92.4453363,658m/data=!3m1!1e3?entry=ttu" target="_blank" rel="noopener noreferrer">click here to view the location</a>.</p>
+</section>
+
+    </main>
+
+    <footer>
+        <p>Created by: <a href="https://www.linkedin.com/in/omacox" target="_blank">Oma Cox</a> - Copyright © 2024</p>
+    </footer>
+</body>
+</html>
