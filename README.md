@@ -1,5 +1,7 @@
 ### Notes
 
+### Media files where too large you'll have to change those mp3 and mp4 references
+
 1. Note for Homework 9
 The github does not have the media files they are too be LOL just grab something but the site is on
 
@@ -105,3 +107,18 @@ git remote add origin <https://github.com/yourusername/my-project.git>
 git push -u origin main
 
 Then go to github and check the respository
+
+Create Respository then
+
+git remote add origin <git@github.com>:omacox/HTML_Class_Homework.git
+git branch -M main
+git push -u origin main
+
+Create New Respository then
+echo "# HTML_Class_Homework" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin <git@github.com>:omacox/HTML_Class_Homework.git
+git push -u origin main
